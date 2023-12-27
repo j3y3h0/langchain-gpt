@@ -1,6 +1,7 @@
 # Requirements
 
 - python 3.11.2
+- wsl ubuntu
 
 # Commands
 
@@ -36,5 +37,15 @@ pip freeze > requirements.txt
 
 # pip 업그레이드
 python -m pip install --upgrade pip
+
+# ollama 셋업 (https://ollama.ai/)
+curl https://ollama.ai/install.sh | sh
+
+ollama serve
+
+# 3개 LLM 모델 중에 선택
+ollama run mistral
+ollama run llama2
+ollama run codellama "Write me a function that outputs the fibonacci sequence"
 
 ```
